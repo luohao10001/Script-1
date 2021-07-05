@@ -31,8 +31,17 @@ https://raw.githubusercontent.com/Sunert/Script/master/TaskConf/youth/surge.sgmo
 
 ```
 [Script]
-中青看点 = type=cron,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js,cronexpr="1 */6 * * *",timeout=20,enable=true
-```
+
+中青阅读 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/article\/complete\.json,max-size=131072,requires-body=true,timeout=10,enable=true
+中青阅读 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/user\/stay\.json,max-size=131072,requires-body=true,timeout=10,enable=true
+中青阅读 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/Youth_Read.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/article\/info\.json,max-size=131072,timeout=10,enable=true
+中青浏览 = type=http-response,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json,max-size=131072,requires-body=true,timeout=30,enable=true
+中青浏览 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json,max-size=131072,requires-body=true,timeout=30,enable=true
+中青看点 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/\w+\/withdraw\d?\.json,max-size=131072,timeout=10,enable=true
+中青看点 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/user\/stay\.json,max-size=131072,requires-body=true,timeout=10,enable=true
+中青看点 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js,pattern=https:\/\/kandian\.wkandian\.com\/v5\/article\/info\.json,max-size=131072,requires-body=true,timeout=10,enable=true
+中青看点 = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/youth.js,pattern=https:\/\/kd\.youth\.cn\/WebApi\/NewTaskIos\/getTaskList,max-size=131072,timeout=10,enable=true
+
 ####  Loon:
 
 * [插件地址](https://raw.githubusercontent.com/Sunert/Script/master/TaskConf/youth/loon.plugin)
